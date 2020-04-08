@@ -1,0 +1,3 @@
+rootProject.name='NDKDemo'
+include ':app'
+include ':nativelib'
