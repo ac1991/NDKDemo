@@ -7,7 +7,7 @@ cmake_minimum_required(VERSION 3.4.1)
 add_library(  
              native-lib
              SHARED
-             native-lib.cpp )
+             native-lib.cpp log.h BlockQueue.cpp readAssetFile.cpp)
 
 #将native-lib关联到第三方头文件，private作为分隔符，第三个参数是第三方头文件的路径
 target_include_directories(native-lib
@@ -19,6 +19,7 @@ target_include_directories(native-lib
 #第二个参数为指明库为动态库
 #第三个参数指明导入到库
 add_library(test-lib SHARED IMPORTED)
+
 #第一个参数为库名称
 #第二个参数指明配置导入第三方so库路径
 #第三个参数表示具体第三方库的路径
